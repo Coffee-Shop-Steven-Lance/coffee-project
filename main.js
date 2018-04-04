@@ -46,31 +46,37 @@ function nameCompare (e){
     tbody.innerHTML = renderCoffees(namedCoffee);
 }
 
-function addCoffee(name){
-
+function addCoffee(e){
+    e.preventDefault();
+    var createCoffeeName = document.getElementById('createCoffeeName').value;
+    var createRoast = document.getElementById("createRoastSelection").value;
+    var coffeeObject = {
+        name: createCoffeeName, roast: createRoast};
+    coffees.push(coffeeObject);
+    tbody.innerHTML = renderCoffees(coffees);
 }
 
 var coffees = [
-    {id: 1, name: 'Light City', roast: 'light'},
-    {id: 2, name: 'Half City', roast: 'light'},
-    {id: 3, name: 'Cinnamon', roast: 'light'},
-    {id: 4, name: 'City', roast: 'medium'},
-    {id: 5, name: 'American', roast: 'medium'},
-    {id: 6, name: 'Breakfast', roast: 'medium'},
-    {id: 7, name: 'High', roast: 'dark'},
-    {id: 8, name: 'Continental', roast: 'dark'},
-    {id: 9, name: 'New Orleans', roast: 'dark'},
-    {id: 10, name: 'European', roast: 'dark'},
-    {id: 11, name: 'Espresso', roast: 'dark'},
-    {id: 12, name: 'Viennese', roast: 'dark'},
-    {id: 13, name: 'Italian', roast: 'dark'},
-    {id: 14, name: 'French', roast: 'dark'},
+    {name: 'Light City', roast: 'light'},
+    {name: 'Half City', roast: 'light'},
+    {name: 'Cinnamon', roast: 'light'},
+    {name: 'City', roast: 'medium'},
+    {name: 'American', roast: 'medium'},
+    {name: 'Breakfast', roast: 'medium'},
+    {name: 'High', roast: 'dark'},
+    {name: 'Continental', roast: 'dark'},
+    {name: 'New Orleans', roast: 'dark'},
+    {name: 'European', roast: 'dark'},
+    {name: 'Espresso', roast: 'dark'},
+    {name: 'Viennese', roast: 'dark'},
+    {name: 'Italian', roast: 'dark'},
+    {name: 'French', roast: 'dark'},
 ];
 
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
-var createButton = document.querySelector('#create-submit');
+var createButton = document.querySelector('#createSubmit');
 var coffeeName = document.getElementById('coffeeName');
 
 tbody.innerHTML = renderCoffees(coffees);
