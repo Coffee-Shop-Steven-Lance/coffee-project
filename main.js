@@ -46,6 +46,10 @@ function nameCompare (e){
     tbody.innerHTML = renderCoffees(namedCoffee);
 }
 
+function addCoffee(name){
+
+}
+
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
@@ -66,8 +70,11 @@ var coffees = [
 var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
+var createButton = document.querySelector('#create-submit');
+
 
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', nameCompare);
 roastSelection.addEventListener('change', updateCoffees);
+createButton.addEventListener('click', addCoffee);
