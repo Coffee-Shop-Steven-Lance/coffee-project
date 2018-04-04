@@ -9,35 +9,43 @@
 <body>
 <h1 class="centerText">Coffee!</h1>
 <hr>
+<div class="container">
+    <div class="col-6 ">
+        <form>
+            <label for="roast-selection"></label>
+            <h6>Roast</h6>
+            <select id="roast-selection" class="stretch">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <br>
+            <h6>Coffee Name</h6>
+            <input id="coffeeName" type="search" placeholder="" class="stretch">
+            <br>
+            <input id="submit" type="submit" class="submitButton"/>
+        </form>
+        <hr>
 
-<form>
-    <label for="roast-selection"></label>
-    <select id="roast-selection">
-        <option>all</option>
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-</form>
+        <h4 class="centerText"> Add a Coffee</h4>
+        <form>
+            <label for="roast-selection"></label>
+            <h6>Roast</h6>
+            <select id="createRoastSelection" class="stretch">
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <h6>Name</h6>
+            <input id="createCoffeeName" type="text" placeholder="Coffee Name" class="stretch">
+            <br>
+            <input id="createSubmit" type="submit" class="submitButton"/>
+        </form>
+    </div>
 
-<input id="coffeeName" type="search" placeholder="">
-<input id="submit" type="submit"/>
-
-<h2> Add a Coffee</h2>
-<form>
-    <label for="roast-selection"></label>
-    <select id="createRoastSelection">
-        <option>light</option>
-        <option>medium</option>
-        <option>dark</option>
-    </select>
-    <input id="createCoffeeName" type="text" placeholder="Coffee Name">
-    <input id="createSubmit" type="submit" />
-</form>
-
-<table>
-    <tbody id="coffees"></tbody>
-</table>
+    <div class="col-6"  id="coffees"></div>
+</div>
 
 <script src="main.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
