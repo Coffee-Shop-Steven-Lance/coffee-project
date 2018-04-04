@@ -37,23 +37,15 @@ function nameCompare (e){
     e.preventDefault();
     var coffeeName = "";
     coffeeName = document.querySelector('#coffeeName');
-    capitalizeFirstLetter(coffeeName);
     var namedCoffee = [];
     coffees.forEach(function(x) {
-        if (x.name.indexOf(coffeeName.value) >= 0) {
-            //updateCoffees(coffeeName)
+        if (x.name.toUpperCase().indexOf(coffeeName.value.toUpperCase()) >= 0) {
             namedCoffee.push(x)
         }
     });
     tbody.innerHTML = renderCoffees(namedCoffee);
-    // updateCoffees(namedCoffee)
 }
 
-function capitalizeFirstLetter(name) {
-    return name.slice(0).toUpperCase() + name.slice(1).toLowerCase();
-}
-
-// from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
     {id: 1, name: 'Light City', roast: 'light'},
     {id: 2, name: 'Half City', roast: 'light'},
