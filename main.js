@@ -71,10 +71,11 @@ var tbody = document.querySelector('#coffees');
 var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var createButton = document.querySelector('#create-submit');
-
+var coffeeName = document.getElementById('coffeeName');
 
 tbody.innerHTML = renderCoffees(coffees);
 
+coffeeName.addEventListener('keyup', nameCompare);
 submitButton.addEventListener('click', nameCompare);
 roastSelection.addEventListener('change', updateCoffees);
 createButton.addEventListener('click', addCoffee);
