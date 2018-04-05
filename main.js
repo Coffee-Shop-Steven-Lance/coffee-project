@@ -3,7 +3,7 @@
 function renderCoffee(coffee) {
     var html = '<div class="coffee row col-6 d-inline-block">';
     html += '<h5 class="coffee">' + coffee.name +'</h5> ';
-    html += '<p class="text-muted coffee">' + coffee.roast + '</p>';
+    html += '<p class="text-muted coffee padding">' + coffee.roast + '</p>';
     html += '</div>';
     return html;
 }
