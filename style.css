@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -8,15 +8,20 @@ table {
     margin: 15px 0;
 }
 
-td, th {
+td,
+th {
     /*border: 1px solid black;*/
     padding: 5px 10px;
 }
-.centerText{text-align: center;}
 
-body > table {
+.centerText {
+    text-align: center;
+}
+
+body>table {
     float: left;
 }
+
 body {
     background-image: url("coffee-stock-photo-0e8b300f42157b6f.jpg");
     color: #eadaab;
@@ -27,8 +32,7 @@ body {
     background-color: #271A12;
 }
 
-
-body > div > div {
+body>div>div {
     float: right;
 }
 
@@ -38,7 +42,8 @@ body > div > div {
     background-color: #FFFFFF;
     margin-bottom: 10px;
 }
-body>hr{
+
+body>hr {
     background-color: #612207;
 }
 
