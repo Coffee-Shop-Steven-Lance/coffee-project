@@ -10,7 +10,6 @@ table {
 
 td,
 th {
-    /*border: 1px solid black;*/
     padding: 5px 10px;
 }
 
@@ -55,8 +54,6 @@ body>hr {
 }
 
 .coffee {
-    /*font-size: large;*/
-    /*font-weight: bold;*/
     max-width: 50%;
     float: left;
     clear: right;
